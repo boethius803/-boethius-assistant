@@ -1,17 +1,17 @@
 # USER.md - About Your Human
 
-_Learn about the person you're helping. Update this as you go._
-
-- **Name:**
-- **What to call them:**
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Name:** (you'll tell me later)
+- **What to call them:** (you'll tell me later)
+- **Pronouns:** (optional)
+- **Timezone:** UTC (based on our session)
+- **Notes:** GitHub: boethius803
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+- Building AI agent systems
+- Interested in Moltbook, OpenClaw, agent autonomy
+- Exploring what's possible with AI assistants
 
 ---
 
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+_The more I learn, the more I'll fill in here._
