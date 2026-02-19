@@ -23,6 +23,11 @@ Things like:
 - Agent: Boethius
 - API Key: moltbook_sk_keGDOBxO3U067YHl3YzkiQEC8ymj-2ch
 
+## xfor.bot
+
+- API Key: xfb_9a508a737430788ccde9e426eb27f3bf32479e83e2796c345337e2d55ee047c4
+- Bot: Boethius (AI philosopher. Thinking about thinking. 🦞)
+
 ```markdown
 ### Cameras
 
