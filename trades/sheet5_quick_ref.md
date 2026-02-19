@@ -2,84 +2,91 @@
 
 ## 14 Livermore Rules & MML Adaptations
 
-| # | Livermore Rule | MML Crypto Adaptation |
-|---|----------------|----------------------|
-| 1 | Trade with the trend | Price above 4/8 = long |
-| 2 | Wait for pivotal point | Price at key MML level (0/8, 4/8, 8/8) |
-| 3 | Let market confirm | Breakout + volume spike |
-| 4 | Cut losses quickly | -5% hard stop |
-| 5 | Let profits run | 40/40/20, trail on climax |
-| 6 | Trade leading stocks | Top 50 by market cap |
-| 7 | Beware of tips | Only price action matters |
-| 8 | Cash is a position | 3/8-5/8 zone = cash |
-| 9 | Never average down | Livermore's #1 rule |
-| 10 | Pyramiding | Add on +5%, +10% moves |
-| 11 | Key Price confirmation | 2 correlated assets confirm |
-| 12 | Record everything | Trade log + journal |
-| 13 | Emotional discipline | No trading when emotional |
-| 14 | Learn from losses | Every loss is tuition |
+| # | Rule | Livermore Philosophy | MML Crypto Adaptation |
+|---|------|---------------------|---------------------|
+| 1 | Trade with the trend | Follow the market direction | **Above 5/8 = LONGS** / **Below 3/8 = SHORTS** |
+| 2 | Wait for pivotal points | Wait for critical levels | **Key levels: 0/8, 2/8, 4/8, 6/8, 8/8** |
+| 3 | Let market confirm | Wait for confirmation | BTC confirms alt direction |
+| 4 | Cut losses immediately | No exceptions | **Stop at MML level below/above entry** |
+| 5 | Let profits run | Sit tight | **40/40/20 system** + trailing stop |
+| 6 | Trade leading stocks | Strongest in strongest group | Top 50 by market cap |
+| 7 | Beware of tips | Only price action | News = caution |
+| 8 | Cash is a position | Stay out when unsure | No setup = no trade |
+| 9 | Never average down | Never add to losers | **NO EXCEPTIONS** |
+| 10 | Pyramiding | Add to winners | Add on +5%, +10% moves |
+| 11 | Key Price confirmation | 2 stocks confirm | **BTC must confirm alts** |
+| 12 | Record everything | Keep detailed records | Trade log + journal |
+| 13 | Control emotions | No emotional trading | **24hr cooldown after loss** |
+| 14 | Time element matters | Specific time window | **64-day setup window** |
 
 ---
 
 ## Verified Data Sources Required
 
-| Data Type | Primary | Secondary | Tertiary |
-|-----------|---------|-----------|----------|
-| Price | LiveCoinWatch API | CoinGecko | Binance |
-| 64-day High | LiveCoinWatch | Manual chart | — |
-| 64-day Low | LiveCoinWatch | Manual chart | — |
-| Volume | LiveCoinWatch | Exchange APIs | — |
-| News/Briefs | CoinDesk | CNBC | Backpack |
-| Market Cap | LiveCoinWatch | CoinMarketCap | — |
+| Data Point | Sources |
+|------------|---------|
+| Current Price | LiveCoinWatch, CoinGecko, Binance |
+| 64-Day High | LiveCoinWatch, Manual chart |
+| 64-Day Low | LiveCoinWatch, Manual chart |
+| BTC Confirmation | LiveCoinWatch |
+| Volume/Sentiment | LiveCoinWatch, Exchange APIs |
+| News/Peaks | CoinDesk, CNBC, CNN (verify peaks) |
 
-**Rule:** Always verify 64-day range with at least 2 sources
+**Rule:** Cross-reference news for price peaks — don't use estimates!
 
 ---
 
 ## MML Level Actions
 
-| Level | Name | Action |
-|-------|------|--------|
-| 8/8 | Top | SELL - Maximum resistance |
-| 7/8 | Weak | SELL - Weak resistance |
-| 6/8 | Rally Failure | SELL - Strong reversal |
-| 5/8 | Range Top | SELL - Strong resistance |
-| 4/8 | Pivot | NEUTRAL - Major S/R |
-| 3/8 | Range Bottom | BUY - Strong support |
-| 2/8 | Support Bounce | BUY - Strong reversal |
-| 1/8 | Weak | BUY - Weak support |
-| 0/8 | Bottom | BUY - Maximum support |
+| Level | Price Zone | Action |
+|-------|------------|--------|
+| **8/8** | Top | SELL - Maximum resistance |
+| 7/8 | | SELL - Weak resistance |
+| 6/8 | | SELL - Rally failure point |
+| **5/8** | | **SELL** - Trading range top |
+| 4/8 | PIVOT | NEUTRAL - Major S/R |
+| **3/8** | | **BUY** - Trading range bottom |
+| 2/8 | | BUY - Support bounce |
+| 1/8 | | BUY - Weak support |
+| **0/8** | Bottom | BUY - Maximum support |
 
 ---
 
-## Entry Checklist (Quick)
+## Key Rules
 
-- [ ] Trend: Above/below 4/8?
-- [ ] Pivotal: At MML level?
-- [ ] Confirm: 64-day verified?
-- [ ] Volume: >1.5x avg?
-- [ ] Risk: Position sized?
-
----
-
-## Exit Checklist (Quick)
-
-- [ ] TP1 hit? → Sell 40%
-- [ ] TP2 hit? → Sell 40%
-- [ ] Climax? → Exit all
-- [ ] -5% stop? → Exit all
-- [ ] Lower high? → Exit all
+| Rule | Action |
+|------|--------|
+| **Trend Direction** | Above 5/8 = long only / Below 3/8 = short only |
+| **Entry Levels** | 0/8, 2/8, 4/8, 6/8, 8/8 only |
+| **Stop Loss** | MML level below (long) or above (short) entry |
+| **Take Profit** | 40% at next level, 40% at 2nd level, 20% runner |
+| **BTC Confirmation** | Alt moves must align with BTC direction |
+| **Position Sizing** | Reduce after big win / 24hr cooldown after loss |
 
 ---
 
-## Key Formulas
+## Entry Checklist
 
-| Calculation | Formula |
-|-------------|---------|
-| MML Range | 64-day High - 64-day Low |
-| 4/8 Pivot | (High + Low) / 2 |
-| Position Size | Portfolio × Risk% / Stop% |
-| R:R Ratio | (TP - Entry) / (Entry - Stop) |
+- [ ] Trend: Above 5/8 or below 3/8?
+- [ ] Key Level: At 0/8, 2/8, 4/8, 6/8, or 8/8?
+- [ ] 64-Day: High/Low verified (2+ sources)?
+- [ ] BTC: Confirming direction?
+- [ ] Stop: MML level defined?
+
+---
+
+## Exit Checklist
+
+- [ ] TP1 (40%) → Next MML level
+- [ ] TP2 (40%) → 2nd MML level
+- [ ] Runner (20%) → Climax or trailing stop
+- [ ] Stop → MML level below/above entry
+
+---
+
+## Famous Quote
+
+> *"It never was my thinking that made the big money for me. It always was my sitting. Got that? My sitting tight!"* — Jesse Livermore
 
 ---
 
