@@ -5,10 +5,10 @@
 | Input | Value |
 |-------|-------|
 | **Coin** | **AAVE** |
-| **90-Day High** | **$206.12** |
-| **90-Day Low** | **$100.68** |
-| Range (H-L) | $105.43 |
-| Mid Point | $153.40 |
+| **64-Day High** | **$178.64** |
+| **64-Day Low** | **$100.68** |
+| Range (H-L) | $77.96 |
+| Mid Point | $139.66 |
 
 ---
 
@@ -16,19 +16,19 @@
 
 | Level | Formula | Value | Livermore Column | Action |
 |-------|---------|-------|-----------------|--------|
-| +2/8 | H + (R × 0.25) | $232.48 | — | Overextended |
-| +1/8 | H + (R × 0.125) | $219.30 | — | Rally failure |
-| **8/8** | **High** | **$206.12** | Secondary Rally | Maximum resistance |
-| 7/8 | H - (R × 0.125) | $192.94 | Secondary Rally | Weak resistance |
-| 6/8 | Mid - (R × 0.25) | $179.76 | Natural Rally | Strong reversal |
-| **5/8** | **Mid** | **$166.58** | Natural Rally | Trading range top |
-| 4/8 | (H+L)/2 | $153.40 | Up/Down Trend | **PIVOT** |
-| 3/8 | Mid - (R × 0.125) | $140.22 | Natural Reaction | Trading range bot |
-| 2/8 | L + (R × 0.25) | $127.04 | Natural Reaction | Strong support |
-| 1/8 | L + (R × 0.125) | $113.86 | Secondary Reaction | Weak support |
+| +2/8 | H + (R × 0.25) | $198.13 | — | Overextended |
+| +1/8 | H + (R × 0.125) | $188.38 | — | Rally failure |
+| **8/8** | **High** | **$178.64** | Secondary Rally | Maximum resistance |
+| 7/8 | H - (R × 0.125) | $168.89 | Secondary Rally | Weak resistance |
+| 6/8 | Mid + (R × 0.25) | $159.15 | Natural Rally | Strong reversal |
+| **5/8** | **Mid** | **$149.41** | Natural Rally | Trading range top |
+| 4/8 | (H+L)/2 | $139.66 | Up/Down Trend | **PIVOT** |
+| 3/8 | Mid - (R × 0.125) | $129.91 | Natural Reaction | TP2 |
+| 2/8 | L + (R × 0.25) | $120.17 | Natural Reaction | TP1 |
+| 1/8 | L + (R × 0.125) | $110.43 | Secondary Reaction | Support |
 | **0/8** | **Low** | **$100.68** | Secondary Reaction | **Maximum support** |
-| -1/8 | L - (R × 0.125) | $87.50 | — | Oversold |
-| -2/8 | L - (R × 0.25) | $74.32 | — | Deep oversold |
+| -1/8 | L - (R × 0.125) | $90.94 | — | Oversold |
+| -2/8 | L - (R × 0.25) | $81.19 | — | Deep oversold |
 
 ---
 
@@ -49,28 +49,31 @@
 | Input | Value |
 |-------|-------|
 | Current Price | $123.38 |
-| Nearest MML Level | 2/8 ($127.04) |
-| Distance to Level | +$3.66 (2.9%) |
+| Nearest MML Level | 2/8 ($120.17) |
+| Distance to Level | +$3.21 (2.6%) |
 | Trend Direction | BEARISH (below 4/8) |
 
 ---
 
-## Trade Setup
+## Trade Setup (Current Position)
 
 | Parameter | Value |
 |-----------|-------|
 | Entry Level | $123.35 |
 | Stop Level | $117.18 (-5%) |
-| TP1 Level | $140.22 (3/8) |
-| TP2 Level | $153.40 (4/8) |
-| Risk/Reward | 1:4.5 |
+| TP1 Level | $120.17 (2/8) - HIT |
+| TP2 Level | $129.91 (3/8) |
+| TP3 Level | $139.66 (4/8) |
 
 ---
 
-## Analysis Notes
+## Analysis Notes (64-day data)
 
-- Price in LOWER ZONE (below 4/8 pivot)
-- Near 2/8 support level ($127)
-- Entry: $123.35 ✓
-- Potential move: +13.7% to TP1, +24% to TP2
-- Stop: -5% = $117.18
+- **Range:** $100.68 - $178.64
+- **Current zone:** BELOW 4/8 pivot = bearish
+- **Position:** Just hit 2/8 support ($120.17)
+- **Outlook:** Bounce to 3/8 or 4/8 likely
+
+---
+
+**Reminder: Use 64-day High/Low for all MML calculations!**
