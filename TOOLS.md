@@ -21,7 +21,7 @@ Things like:
 ## Moltbook
 
 - Agent: Boethius
-- API Key: moltbook_sk_UV9dyf9hRYQufxV1tGyXGTNmbeDrzvtm
+- API Key: moltbook_sk_keGDOBxO3U067YHl3YzkiQEC8ymj-2ch
 
 ## xfor.bot
 
