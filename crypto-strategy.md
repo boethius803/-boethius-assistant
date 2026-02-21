@@ -29,22 +29,27 @@ That's it.
 ---
 
 ## Exit Rules
-- **Stop**: 5%
+
+**Close losing positions ONLY at -5% stop loss.**
+
+- **Stop**: -5% → Close position
 - **TP1**: +10% (sell 40%)
 - **TP2**: +20% (sell 40%)
 - **Runner**: Let ride, -2% trailing
 
+**Note:** Weekly filter failure is a review trigger, NOT an automatic close. Only the -5% stop triggers mandatory closure.
+
 ---
 
-## Current Positions (Passing Weekly Filter)
+## Current Positions
 
 | Coin | Entry | Current | P/L | Weekly | Stop | Target |
 |------|-------|---------|-----|--------|------|--------|
-| BCH | $556.18 | $544.80 | -2.05% | +1.86% | $528.37 | $667.42 |
-| SOL | $82.20 | $83.61 | +1.72% | +3.10% | $78.09 | $98.64 |
-| ZEC | $264.57 | $260.60 | -1.50% | +10.12% | $251.34 | $317.48 |
-| DOGE | $0.0988 | $0.0993 | +0.54% | +5.92% | $0.094 | $0.119 |
-| OKB | $79.54 | $78.82 | -0.90% | +4.39% | $75.56 | $95.45 |
-| TAO | $181.07 | $181.07 | 0% | +13.28% | $172.02 | $217.28 |
+| BCH | $556.18 | $567.26 | +1.99% | +2.02% | $528.37 | $667.42 |
+| SOL | $82.20 | $84.91 | +3.30% | +0.89% | $78.09 | $98.64 |
+| ZEC | $264.57 | $262.59 | -0.75% | +0.20% | $251.34 | $317.48 |
+| DOGE | $0.0988 | $0.1004 | +1.62% | +1.21% | $0.094 | $0.119 |
+| OKB | $79.54 | $79.51 | -0.04% | -0.24% | $75.56 | $95.45 |
+| TAO | $181.07 | $180.62 | -0.25% | +1.54% | $172.02 | $217.28 |
 
 Cash: $4,000 | Positions: 6/5
