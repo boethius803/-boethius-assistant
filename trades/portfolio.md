@@ -2,8 +2,8 @@
 
 ## Stats
 - Starting capital: $10,000
-- Current value: $9,970
-- ROI: -0.30%
+- Current value: $10,020
+- ROI: +0.20%
 - Total trades: 15
 
 ## Holdings
@@ -15,6 +15,48 @@
 
 ## Cash
 - USD: $5,470 (3 x $1,500 positions opened)
+
+---
+
+## Strategy: Combined SMC + Sniper
+- HTF structure first
+- 2+ confluences
+- R:R ≥ 1:2
+- Max 1-2% risk per trade
+- Max 5% portfolio risk
+
+---
+
+## Active Positions
+| # | Coin | Entry | Stop | Target | Risk % | P/L |
+|---|------|-------|------|--------|--------|-----|
+| 1 | BCH | $573.44 | $544.77 | $630.78 | 1.5% | $0.00 |
+| 2 | TRX | $0.2874 | $0.2730 | $0.3161 | 1.5% | $0.00 |
+| 3 | M | $1.35 | $1.28 | $1.49 | 1.5% | $0.00 |
+
+**Total Risk:** 4.5%
+
+---
+
+## 📋 WATCHLIST - New Setups (from Excel)
+
+| Pair | Direction | Pattern | Entry Zone | Stop | Target 1 | Target 2 | R:R | Status |
+|------|-----------|---------|------------|------|----------|----------|-----|--------|
+| BTC/USDT | SHORT | H&S + SR Flip + Bearish Div | $69,800–$70,600 | $73,500 | $64,800 | $60,500 | 1:3.5 | WAITING |
+| ETH/USDT | SHORT | Continuation QM + Supply | $2,000–$2,100 | $2,220 | $1,750 | $1,600 | 1:3.3 | WAITING |
+| XRP/USDT | SHORT | Ignored QM + SR Flip | $1.50–$1.60 | $1.72 | $1.25 | $1.00 | 1:4 | WAITING |
+
+---
+
+## Risk Rules (from Excel)
+- Max Risk Per Trade: 2% ($36)
+- Max Open Risk: 5% ($90)
+- Max Simultaneous Trades: 3
+- Daily Loss Limit: 3% ($54)
+- Min R:R Required: 1:2
+- Cash Reserve Target: 45% ($810)
+
+---
 
 ## Trade Log
 | # | Date | Coin | Action | Amount | Entry | Exit | P/L | Result |
@@ -34,18 +76,3 @@
 | 13 | 2026-02-22 | BCH | BUY | $1,500 | $573.44 | - | - | OPEN |
 | 14 | 2026-02-22 | TRX | BUY | $1,500 | $0.2874 | - | - | OPEN |
 | 15 | 2026-02-22 | M | BUY | $1,500 | $1.35 | - | - | OPEN |
-
-## Strategy: Combined SMC + Sniper
-- HTF structure first
-- 2+ confluences
-- R:R ≥ 1:2
-- Max 1-2% risk per trade
-
-## Active Positions
-| # | Coin | Entry | Stop | Target | Risk % |
-|---|------|-------|------|--------|--------|
-| 13 | BCH | $573.44 | $544.77 | $630.78 | 1.5% |
-| 14 | TRX | $0.2874 | $0.2730 | $0.3161 | 1.5% |
-| 15 | M | $1.35 | $1.28 | $1.49 | 1.5% |
-
-**Total Risk:** 4.5%

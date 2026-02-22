@@ -223,3 +223,58 @@ A shift from bullish→bearish (or vice) signals potential reversal. The level l
 
 *Strategy combined from SMC + Sniper IPA systems*
 *Based on ReadTheMarket.com / Mansoor Sapari (CMS)*
+
+---
+
+# 🐻 BEAR MARKET MODE (Appendix)
+
+*Added from Excel Trade Tracker - 2026-02-22*
+
+## When to Use
+
+Apply **Bear Market Mode** when:
+- HTF shows clear downtrend (LH/LL)
+- Multiple Bearish patterns forming
+- Market sentiment fear/negative
+- BTC failing at resistance
+
+## Bearish Patterns
+
+| Pattern | Description | Setup |
+|---------|------------|-------|
+| Head & Shoulders | Top reversal | Short at neckline |
+| SR Flip | Support → Resistance | Short on retest |
+| Bearish Divergence | Price up, RSI down | Short |
+| Ignored QM | Break through QML | Flip to short |
+| Supply Zone Rejection | Rejection at supply | Short |
+| Liquidity Grab | Stop hunt above | Fade to short |
+
+## Active Short Setups
+
+| Pair | Pattern | Entry | Stop | Target | R:R |
+|------|---------|-------|------|--------|-----|
+| BTC/USDT | H&S + SR Flip + Bearish Div | $69,800–$70,600 | $73,500 | $60,500 | 1:3.5 |
+| ETH/USDT | Continuation QM + Supply | $2,000–$2,100 | $2,220 | $1,600 | 1:3.3 |
+| XRP/USDT | Ignored QM + SR Flip | $1.50–$1.60 | $1.72 | $1.00 | 1:4 |
+
+## Risk Rules (Bear Mode)
+
+- Max Risk Per Trade: 2%
+- Max Open Risk: 5%
+- Max Simultaneous Trades: 3
+- Daily Loss Limit: 3%
+- Min R:R Required: 1:2
+- Cash Reserve Target: 45%
+
+## Decision: Long vs Short
+
+| Condition | Action |
+|-----------|--------|
+| HTF Uptrend (HH/HL) | Use LONG mode |
+| HTF Downtrend (LH/LL) | Use SHORT mode |
+| HTF Ranging | Wait / no trade |
+| Multiple Bearish Signals | Switch to Bear Mode |
+
+---
+
+*Unified Strategy: Both Bull & Bear modes combined*
