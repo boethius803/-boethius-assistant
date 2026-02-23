@@ -1,56 +1,48 @@
-# Crypto Trading Strategy
+# Livermore-Momentum System
 
-**Active Strategy:** Combined SMC + Sniper (strategy-combined.md)
+## Only Rule That Matters
 
----
+```
+Weekly > +5%  → Strong Uptrend → LONG
+Weekly < -5% → Strong Downtrend → SHORT
+Weekly -5% to +5% → No trade
+```
 
-## Strategy Reference
-
-All trading follows the **Combined SMC + Sniper Strategy** documented in:
-- `trades/strategy-combined.md` — Full strategy guide
-- `trades/strategy-sniper-ipa.html` — Visual HTML version
-
----
-
-## Quick Rules (From Combined Strategy)
-
-### Core Filters
-- HTF structure confirmed (Daily/4H)
-- Pattern recognized (QM, Fakeout, Stop Hunt, etc.)
-- 2+ confluences required
-- R:R ≥ 1:2
-
-### Risk Management
-- Max 1-2% risk per trade
-- Max 5% open risk total
-- Daily loss limit: 3% → STOP TRADING
-
-### Trade Management
-- +1R: Move to BE, take 30-50% partial
-- +2R: Take 25% more, trail to +1R
-- +3R: Close or trail tight
+That's it.
 
 ---
 
-## Pre-Trade Checklist
+## Entry Checklist
 
-Run through `trades/strategy-combined.md` checklist before every entry:
-- [ ] HTF structure identified
-- [ ] Trade aligned with HTF bias
-- [ ] Recognized pattern present
-- [ ] 2+ confluences
-- [ ] Stop loss defined
-- [ ] R:R ≥ 1:2
-- [ ] Position size ≤ 2% risk
-- [ ] No revenge trading
-- [ ] Clear mind
+- [ ] Weekly > +5% (for longs) OR Weekly < -5% (for shorts)
+- [ ] Daily aligned (green for longs, red for shorts)
+- [ ] BTC confirms direction (for alts)
 
 ---
 
-## Active Deploy Scan
-
-See: `trades/smc-scan-top50.md` for current setups
+## Position Rules
+- Max 5 positions
+- Max 20% per coin
+- Max 2% risk per trade
+- 24hr cooldown after loss
 
 ---
 
-*Previous momentum-only strategy deprecated. Now using combined SMC + Sniper approach.*
+## Exit Rules
+- **Stop**: 5%
+- **TP1**: +10% (sell 40%)
+- **TP2**: +20% (sell 40%)
+- **Runner**: Let ride, -2% trailing
+
+---
+
+## Current Positions (Passing Weekly Filter)
+
+| Coin | Entry | Current | P/L | Weekly | Stop | Target |
+|------|-------|---------|-----|--------|------|--------|
+| ZEC | $264.57 | $260.60 | -1.50% | +10.12% | $251.34 | $317.48 |
+| DOGE | $0.0988 | $0.0993 | +0.54% | +5.92% | $0.094 | $0.119 |
+| TAO | $181.07 | $181.07 | 0% | +13.28% | $172.02 | $217.28 |
+| LINK | $8.33 | $8.33 | 0% | +5.50% | $7.91 | $10.00 |
+
+Cash: $6,000 | Positions: 4/5

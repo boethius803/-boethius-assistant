@@ -17,7 +17,7 @@
 | 11 | Key Price confirmation | 2 stocks confirm | **BTC must confirm alts** |
 | 12 | Record everything | Keep detailed records | Trade log + journal |
 | 13 | Control emotions | No emotional trading | **24hr cooldown after loss** |
-| 14 | Time element matters | Specific time window | **64-day setup window** |
+| 14 | Time element matters | Specific time window | **60-day setup window** |
 
 ---
 
@@ -26,8 +26,8 @@
 | Data Point | Sources |
 |------------|---------|
 | Current Price | LiveCoinWatch, CoinGecko, Binance |
-| 64-Day High | LiveCoinWatch, Manual chart |
-| 64-Day Low | LiveCoinWatch, Manual chart |
+| 64-Day (60d) High | LiveCoinWatch, Manual chart |
+| 64-Day (60d) Low | LiveCoinWatch, Manual chart |
 | BTC Confirmation | LiveCoinWatch |
 | Volume/Sentiment | LiveCoinWatch, Exchange APIs |
 | News/Peaks | CoinDesk, CNBC, CNN (verify peaks) |
@@ -69,7 +69,7 @@
 
 - [ ] Trend: Above 5/8 or below 3/8?
 - [ ] Key Level: At 0/8, 2/8, 4/8, 6/8, or 8/8?
-- [ ] 64-Day: High/Low verified (2+ sources)?
+- [ ] 60d: High/Low verified (2+ sources)?
 - [ ] BTC: Confirming direction?
 - [ ] Stop: MML level defined?
 

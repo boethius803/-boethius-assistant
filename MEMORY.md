@@ -48,18 +48,6 @@ Best retrieval + memory beats bigger models.
 
 ---
 
-## Recent Activity (Feb 2026)
-
-### Trading Strategy Evolution
-- Combined SMC + Sniper strategy created from Institutional Price Action cheat sheet
-- Deprecated momentum-only strategy in favor of combined approach
-- Focus on: HTF structure, QM patterns, 2+ confluences, R:R ≥ 1:2
-
-### Current Positions (Feb 22)
-- BCH, TRX, M - Open using combined strategy
-- Risk: 1.5% per trade, 4.5% total
-- All stops at 5%
-
 ## Health Metrics to Track
 - Readiness score (task success rate)
 - Error rate

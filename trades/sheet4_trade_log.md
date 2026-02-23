@@ -1,24 +1,63 @@
-# Trade Log - Combined SMC + Sniper Strategy
+# Trade Log - Livermore-MML
 
 ## Portfolio Summary
 
 | Metric | Value |
 |--------|-------|
 | Starting Capital | $10,000 |
-| Current Value | $9,970 |
-| Total ROI | -0.30% |
-| Total Trades | 15 |
-| Open Positions | 3 |
+| Current Value | $10,000 |
+| Total ROI | 0% |
+| Win Rate | — |
+| Total Trades | 0 |
+| Winning Trades | 0 |
+| Losing Trades | 0 |
+| Avg Win | — |
+| Avg Loss | — |
+| Largest Win | — |
+| Largest Loss | — |
+
+---
+
+## Trade Entry Template
+
+| Field | Value |
+|-------|-------|
+| Trade # | |
+| Date Entered | |
+| Coin | |
+| Direction | LONG / SHORT |
+| Entry Price | |
+| Position Size ($) | |
+| Position Size (%) | |
+| MML Level Entry | |
+| Stop Loss | |
+| TP1 (MML) | |
+| TP2 (MML) | |
+| Reason/Notes | |
+
+---
+
+## Trade Exit Template
+
+| Field | Value |
+|-------|-------|
+| Date Exited | |
+| Exit Price | |
+| Exit Reason | TP1 / TP2 / STOP / MANUAL / CLIMAX |
+| P/L ($) | |
+| P/L (%) | |
+| Result | WIN / LOSS |
+| Lessons Learned | |
 
 ---
 
 ## Active Positions
 
-| # | Coin | Entry | Current | P/L % | Stop | Target |
-|---|------|-------|---------|-------|------|--------|
-| 13 | BCH | $573.44 | $573.44 | 0% | $544.77 | $630.78 |
-| 14 | TRX | $0.2874 | $0.2874 | 0% | $0.2730 | $0.3161 |
-| 15 | M | $1.35 | $1.35 | 0% | $1.28 | $1.49 |
+| # | Coin | Entry | Current | P/L % | MML | Stop | TP1 | TP2 |
+|---|------|-------|---------|-------|-----|------|-----|-----|
+| 1 | AAVE | $123.35 | | | | | | |
+| 2 | BCH | $556.18 | | | | | | |
+| 3 | SOL | $82.20 | | | | | | |
 
 ---
 
@@ -26,21 +65,16 @@
 
 | # | Date | Coin | Dir | Entry | Exit | P/L $ | P/L % | Result |
 |---|------|------|-----|-------|------|-------|--------|--------|
-| 1 | 2026-02-19 | AAVE | LONG | $123.35 | $118.91 | -$37.02 | -3.70% | ❌ |
-| 2 | 2026-02-19 | BCH | LONG | $556.18 | $574.40 | +$16.35 | +3.27% | ✅ |
-| 3 | 2026-02-19 | SOL | LONG | $82.20 | $85.11 | +$35.54 | +3.63% | ✅ |
-| 4 | 2026-02-20 | ZEC | LONG | $264.57 | $254.29 | -$38.78 | -3.88% | ❌ STOP |
-| 5 | 2026-02-20 | DOGE | LONG | $0.0988 | $0.0972 | -$16.00 | -1.62% | ❌ |
-| 6 | 2026-02-20 | OKB | LONG | $79.54 | $78.32 | -$15.85 | -1.58% | ❌ |
-| 7 | 2026-02-20 | TAO | LONG | $181.07 | $178.58 | -$13.78 | -1.38% | ❌ |
-| 8 | 2026-02-21 | NEAR | LONG | $1.10 | $1.034 | -$48.02 | -6.00% | ❌ STOP |
-| 9 | 2026-02-22 | BCH | LONG | $556.18 | $574.46 | +$16.38 | +3.29% | ✅ TP1 |
-| 10 | 2026-02-22 | ZEC | LONG | $264.57 | $254.29 | -$38.78 | -3.88% | ❌ STOP |
-| 11 | 2026-02-22 | SOL | LONG | $82.20 | $85.11 | +$35.54 | +3.63% | ✅ |
-| 12 | 2026-02-22 | ALL | CLOSE | - | - | - | - | ✅ |
-| 13 | 2026-02-22 | BCH | LONG | $573.44 | - | - | - | OPEN |
-| 14 | 2026-02-22 | TRX | LONG | $0.2874 | - | - | - | OPEN |
-| 15 | 2026-02-22 | M | LONG | $1.35 | - | - | - | OPEN |
+| 1 | | | | | | | | |
+| 2 | | | | | | | | |
+| 3 | | | | | | | | |
+| 4 | | | | | | | | |
+| 5 | | | | | | | | |
+| 6 | | | | | | | | |
+| 7 | | | | | | | | |
+| 8 | | | | | | | | |
+| 9 | | | | | | | | |
+| 10 | | | | | | | | |
 
 ---
 
@@ -48,17 +82,6 @@
 
 | Month | Trades | Wins | Losses | Win % | Net P/L |
 |-------|--------|------|--------|-------|---------|
-| Feb 2026 | 15 | 4 | 8 | 33% | -$30.76 |
-
----
-
-## New Entries (Feb 22)
-
-| Coin | Position | Entry | Stop | Target | Risk |
-|------|----------|-------|------|--------|------|
-| BCH | 2.616 | $573.44 | $544.77 | $630.78 | $28.66 |
-| TRX | 5,221 | $0.2874 | $0.2730 | $0.3161 | $22.50 |
-| M | 1,111 | $1.35 | $1.28 | $1.49 | $22.50 |
-
-**Total invested:** $4,500
-**Total risk:** ~$74 (0.7%)
+| | | | | | |
+| | | | | | |
+| | | | | | |

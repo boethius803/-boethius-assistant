@@ -26,7 +26,7 @@
 
 | Confirmation | Check |
 |-------------|-------|
-| 64-day range verified from multiple sources? | ☐ |
+| 60-day range verified from multiple sources? | ☐ |
 | Correlated asset confirms (e.g., BTC for alts)? | ☐ |
 | Weekly momentum >5% (uptrend) or <-5% (downtrend)? | ☐ |
 | Daily green (uptrend) or red (downtrend)? | ☐ |

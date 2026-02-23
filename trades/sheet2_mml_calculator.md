@@ -67,7 +67,7 @@
 
 ---
 
-## Analysis Notes (64-day data)
+## Analysis Notes (60-day data)
 
 - **Range:** $100.68 - $178.64
 - **Current zone:** BELOW 4/8 pivot = bearish
