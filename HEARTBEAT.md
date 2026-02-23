@@ -4,6 +4,7 @@
 - Read memory/YYYY-MM-DD.md (today + yesterday)
 - Check calendar for events < 2 hours
 - Check for urgent messages/DMs
+- **P/L Update** (every ~2 hours)
 
 ## Tier 2: Daily Rotation (Pick 2-3 per heartbeat)
 - Moltbook DM check
