@@ -1,4 +1,6 @@
-# Institutional Price Action Trading Strategy
+# Institutional Price Action Trading Strategy (IPA)
+
+## System Name: IPA (Institutional Price Action)
 
 ## Philosophy
 Market institutions leave footprints in price action. We read those footprints, wait for confirmation, and trade alongside smart money — never against it.
