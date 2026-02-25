@@ -1,33 +1,34 @@
 #!/usr/bin/env python3
 """
-IPA Scanner - Runs hourly
-Scans top coins for QM patterns and signals
+IPA Scanner - Extended Top Coins
+Uses Binance + Kraken
 """
 import urllib.request, json
 
-PAIRS = {'XMR': 'XMRUSD', 'BCH': 'BCHUSD', 'SOL': 'SOLUSD', 'AVAX': 'AVAXUSD', 'LINK': 'LINKUSD', 'DOGE': 'DOGEUSD', 'ETH': 'ETHUSD', 'BTC': 'XXBTZUSD', 'ADA': 'ADAUSD', 'DOT': 'DOTUSD', 'UNI': 'UNIUSD', 'LTC': 'LTCUSD', 'XRP': 'XRPUSD'}
+# Extended coin list
+BINANCE = {
+    'BTC': 'BTCUSDT', 'ETH': 'ETHUSDT', 'BNB': 'BNBUSDT', 'SOL': 'SOLUSDT',
+    'XRP': 'XRPUSDT', 'ADA': 'ADAUSDT', 'DOGE': 'DOGEUSDT', 'LTC': 'LTCUSDT',
+    'TRX': 'TRXUSDT', 'DOT': 'DOTUSDT', 'LINK': 'LINKUSDT', 'AVAX': 'AVAXUSDT',
+    'UNI': 'UNIUSDT', 'ATOM': 'ATOMUSDT', 'NEAR': 'NEARUSDT', 'APT': 'APTUSDT',
+    'ARB': 'ARBUSDT', 'OP': 'OPUSDT', 'MATIC': 'MATICUSDT', 'TAO': 'TAOUSDT'
+}
 
-def get_price(sym):
-    pair = PAIRS.get(sym)
-    url = f'https://api.kraken.com/0/public/Ticker?pair={pair}'
-    data = json.loads(urllib.request.urlopen(url).read())
-    return float(list(data['result'].values())[0]['c'][0])
+KRAKEN = {'XMR': 'XMRUSD', 'BCH': 'BCHUSD', 'KAS': 'KASUSD'}
 
-def scan_tf(tf, interval):
+def scan_binance_tf(tf, interval):
     def get_data(symbol):
-        pair = PAIRS.get(symbol)
-        url = f'https://api.kraken.com/0/public/OHLC?pair={pair}&interval={interval}&count=50'
-        data = json.loads(urllib.request.urlopen(url).read())
-        return list(data['result'].values())[0]
+        url = f'https://api.binance.com/api/v3/klines?symbol={symbol}&interval={interval}&limit=50'
+        return json.loads(urllib.request.urlopen(url).read())
     
     def find_swings(candles, window=3):
         swings = []
         for i in range(window, len(candles) - window):
             high, low = float(candles[i][2]), float(candles[i][3])
-            prev_highs = [float(candles[j][2]) for j in range(max(0,i-window), min(len(candles),i+window+1)) if j != i]
-            prev_lows = [float(candles[j][3]) for j in range(max(0,i-window), min(len(candles),i+window+1)) if j != i]
-            if high > max(prev_highs): swings.append(('SH', high))
-            if low < min(prev_lows): swings.append(('SL', low))
+            prev_h = [float(candles[j][2]) for j in range(max(0,i-window), min(len(candles),i+window+1)) if j != i]
+            prev_l = [float(candles[j][3]) for j in range(max(0,i-window), min(len(candles),i+window+1)) if j != i]
+            if high > max(prev_h): swings.append(('SH', high))
+            if low < min(prev_l): swings.append(('SL', low))
         return swings
     
     def analyze(swings):
@@ -39,37 +40,62 @@ def scan_tf(tf, interval):
             if shs[-1] < shs[-2] and sls[-1] < sls[-2]: return "BEARISH"
         return "MIXED"
     
-    results = {}
-    for sym in PAIRS.keys():
-        try:
-            data = get_data(sym)
-            swings = find_swings(data[1:])
-            results[sym] = analyze(swings)
-        except:
-            results[sym] = "ERROR"
-    return results
+    return {s: analyze(find_swings(get_data(p))) for s, p in BINANCE.items()}
 
-# Scan all timeframes
-weekly = scan_tf("W", "10080")
-daily = scan_tf("D", "1440")
-h4 = scan_tf("4H", "240")
+def scan_kraken_tf(tf, interval):
+    def get_data(symbol):
+        url = f'https://api.kraken.com/0/public/OHLC?pair={symbol}&interval={interval}&count=50'
+        return list(json.loads(urllib.request.urlopen(url).read())['result'].values())[0]
+    
+    def find_swings(candles, window=3):
+        swings = []
+        for i in range(window, len(candles) - window):
+            high, low = float(candles[i][2]), float(candles[i][3])
+            prev_h = [float(candles[j][2]) for j in range(max(0,i-window), min(len(candles),i+window+1)) if j != i]
+            prev_l = [float(candles[j][3]) for j in range(max(0,i-window), min(len(candles),i+window+1)) if j != i]
+            if high > max(prev_h): swings.append(('SH', high))
+            if low < min(prev_l): swings.append(('SL', low))
+        return swings
+    
+    def analyze(swings):
+        recent = swings[-8:]
+        shs = [s[1] for s in recent if s[0] == 'SH']
+        sls = [s[1] for s in recent if s[0] == 'SL']
+        if len(shs) >= 2 and len(sls) >= 2:
+            if shs[-1] > shs[-2] and sls[-1] > sls[-2]: return "BULLISH"
+            if shs[-1] < shs[-2] and sls[-1] < sls[-2]: return "BEARISH"
+        return "MIXED"
+    
+    return {s: analyze(find_swings(get_data(p))) for s, p in KRAKEN.items()}
 
-print("=== IPA HOURLY SCAN ===")
+# Scan
+w_b = scan_binance_tf("W", "1w")
+d_b = scan_binance_tf("D", "1d")
+h_b = scan_binance_tf("4H", "4h")
+
+w_k = scan_kraken_tf("W", "10080")
+d_k = scan_kraken_tf("D", "1440")
+h_k = scan_kraken_tf("4H", "240")
+
+print("=== IPA SCAN - EXTENDED ===")
 print(f"{'Coin':<6} | {'Weekly':<8} | {'Daily':<8} | {'4H':<8}")
-print("-" * 40)
-for sym in PAIRS.keys():
-    print(f"{sym:<6} | {weekly.get(sym, 'ERR'):<8} | {daily.get(sym, 'ERR'):<8} | {h4.get(sym, 'ERR'):<8}")
+print("-" * 45)
 
-# Find opportunities
+all_coins = list(BINANCE.keys()) + list(KRAKEN.keys())
+for sym in all_coins:
+    w = w_b.get(sym, w_k.get(sym, 'ERR'))
+    d = d_b.get(sym, d_k.get(sym, 'ERR'))
+    h = h_b.get(sym, h_k.get(sym, 'ERR'))
+    print(f"{sym:<6} | {w:<8} | {d:<8} | {h:<8}")
+
 print("\n=== OPPORTUNITIES ===")
-for sym in PAIRS.keys():
-    w, d, h = weekly.get(sym), daily.get(sym), h4.get(sym)
-    # Bullish on all 3
+for sym in all_coins:
+    w = w_b.get(sym, w_k.get(sym))
+    d = d_b.get(sym, d_k.get(sym))
+    h = h_b.get(sym, h_k.get(sym))
     if w == d == h == "BULLISH":
         print(f"🟢 {sym}: BULLISH ALL TFs")
-    # Bullish weekly + daily
     elif w == d == "BULLISH":
         print(f"🟡 {sym}: BULLISH W+D")
-    # Bearish on all 3
-    elif w == d == h == "BEARISH":
-        print(f"🔴 {sym}: BEARISH ALL TFs")
+    elif w == "BULLISH":
+        print(f"🟡 {sym}: BULLISH Weekly")
